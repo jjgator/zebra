@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.scss';
+import Card from '../Card/Card';
 
-const DATA = require('./carrier_cards.json');
+const DATA = require('../../carrier_cards.json');
 
 class App extends React.Component {
   constructor(props) {
@@ -26,12 +27,22 @@ class App extends React.Component {
   }
 
   render () {
-    let { searched, searchTime } = this.state;
+    let { cards, searched, searchTime } = this.state;
 
     return (
       <div className="app">
+
         {searched && searchTime &&
         <span>You just compared {searched} rates in {searchTime} minutes!</span>}
+
+        {cards &&
+        <div class="card-container">
+          {cards.map(card => {
+            return (
+              <Card />
+            );
+          })}
+        </div>}
       </div>
     );
   }
