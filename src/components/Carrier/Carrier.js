@@ -8,8 +8,10 @@ const Carrier = (props) => {
     return (
         <div className="carrier-box">
             <p className="carrier">{name}</p>
+            
             {tagline && 
-                <p className="tagline">{tagline}</p>}
+            <p className="tagline">{tagline}</p>}
+
             <div className="details">
                 {stars &&
                 <div className="star-box">
