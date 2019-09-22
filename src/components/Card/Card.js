@@ -1,8 +1,17 @@
 import React from 'react';
+import './Card.scss';
+import { ReactComponent as IconStarWhite } from '../../assets/IconStarWhite.svg';
 
-const Card = () => {
+const Card = (props) => {
+    let { type, cornerTag, name, tagline, stars, link, rate, tag, features } = props;
+    
     return (
-        <div>I'm a card</div>
+        <div className="card">
+            {cornerTag &&
+            <div className="corner">
+                <IconStarWhite/>
+            </div>}
+        </div>
     );
 };
 
