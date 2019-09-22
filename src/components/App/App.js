@@ -36,10 +36,11 @@ class App extends React.Component {
                 <span>You just compared {searched} rates in {searchTime} minutes!</span>}
 
                 {cards &&
-                <div class="card-container">
-                    {cards.map(card => {
+                <div className="card-container">
+                    {cards.map((card, i) => {
                         return (
                         <Card 
+                            key={i}
                             type={card.type}
                             cornerTag={card.corner_tag}
                             name={card.name}
