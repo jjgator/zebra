@@ -2,6 +2,7 @@ import React from 'react';
 import './Card.scss';
 import Logo from '../Logo/Logo';
 import Carrier from '../Carrier/Carrier';
+import Rate from '../Rate/Rate';
 
 const Card = (props) => {
     let { type, cornerTag, name, tagline, stars, link, rate, tag, features } = props;
@@ -15,6 +16,7 @@ const Card = (props) => {
                     tagline={tagline}
                     stars={stars}
                     features={features}/>
+                <Rate rate={rate}/>
             </div> 
         </div>
     );
