@@ -8,13 +8,15 @@ const Card = (props) => {
     
     return (
         <div className="card">
-            {cornerTag &&
-            <div className="corner-box">
+            {cornerTag 
+            ? <div className="corner-box">
                 <div className="corner">
                     <IconStarWhite/>
                 </div>
                 <img className="corner-logo" src={Logo} alt=""/>
             </div>
+            : <img className="card-logo" src={Logo} alt=""/>
+
 }
         </div>
     );
