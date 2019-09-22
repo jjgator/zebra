@@ -15,9 +15,7 @@ const Card = (props) => {
                 </div>
                 <img className="corner-logo" src={Logo} alt=""/>
             </div>
-            : <img className="card-logo" src={Logo} alt=""/>
-
-}
+            : <img className="card-logo" src={Logo} alt=""/>}
         </div>
     );
 };
