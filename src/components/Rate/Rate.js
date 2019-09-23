@@ -1,11 +1,12 @@
 import React from 'react';
 import './Rate.scss';
+import Button from '../Button/Button';
 
 const Rate = (props) => {
-    let { rate, tag } = props;
+    let { rate, tag, link, type } = props;
 
     return (
-        <React.Fragment>
+        <div className="quote-box">
             {rate &&
             <div className="rate-box">
                 <span className="tag">{tag}</span>                
@@ -15,7 +16,10 @@ const Rate = (props) => {
                 </div>
                 <span className="per">/ mo</span>
             </div>}
-        </React.Fragment>
+            <Button
+                link={link}
+                type={type}/>
+        </div>
     );
 };
 

@@ -5,12 +5,16 @@ import Carrier from '../Carrier/Carrier';
 import Rate from '../Rate/Rate';
 
 const Card = (props) => {
-    let { cornerTag, name, tagline, stars, rate, features, tag } = props;
+    let { 
+        cornerTag, name, tagline, stars, rate, features, 
+        tag, type, link 
+    } = props;
 
     return (
         <div className="card">
             <div className="header">
-                <Logo cornerTag={cornerTag}/>
+                <Logo 
+                    cornerTag={cornerTag}/>
                 <Carrier
                     name={name}
                     tagline={tagline}
@@ -18,8 +22,13 @@ const Card = (props) => {
                     features={features}/>
                 <Rate 
                     rate={rate}
-                    tag={tag}/>
-            </div> 
+                    tag={tag}
+                    type={type}
+                    link={link}/>
+            </div>
+            <button className="arrow-button">
+                <div className="arrow"></div>
+            </button> 
         </div>
     );
 };

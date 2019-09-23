@@ -21,19 +21,22 @@ class App extends React.Component {
 
         this.setState({
             cards: DATA.carrier_cards,
-            searched: DATA.carriers_searched, 
+            searchText: DATA.carriers_searched.toString(), 
             searchTime: time
         });
     }
 
     render () {
-        let { cards, searched, searchTime } = this.state;
+        let { cards, searchText, searchTime } = this.state;
 
         return (
             <div className="app">
 
-                {searched && searchTime &&
-                <span>You just compared {searched} rates in {searchTime} minutes!</span>}
+                {searchText && searchTime &&
+                <span className="banner-text">You just compared 
+                    <strong> {searchText} rates</strong> in 
+                    <span> {searchTime}</span> minutes!
+                </span>}
 
                 {cards &&
                 <div className="card-container">

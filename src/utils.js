@@ -1,6 +1,5 @@
 import React from 'react';
-import { ReactComponent as IconArrowDown } from './assets/IconArrowDown.svg';
-import { ReactComponent as IconBoltWhite } from './assets/IconBoltWhite.svg';
+
 import { ReactComponent as IconCarrierDefault } from './assets/IconCarrierDefault.svg';
 import { ReactComponent as IconChevronDown } from './assets/IconChevronDown.svg';
 import { ReactComponent as IconFeatures247Support } from './assets/IconFeatures247Support.svg';
@@ -28,10 +27,6 @@ import { ReactComponent as IconStarWhite } from './assets/IconStarWhite.svg';
 
 export const getIcon = (name) => {
     switch (name) {
-        case 'IconArrowDown':
-            return <IconArrowDown/>;
-        case 'IconBoltWhite':
-            return <IconBoltWhite/>;
         case 'IconCarrierDefault':
             return <IconCarrierDefault/>;        
         case 'IconChevronDown':

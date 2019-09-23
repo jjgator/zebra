@@ -1,4 +1,9 @@
 .app {
-    margin: auto;
+    margin: 25px auto 10px auto;
     width: 90vw;
+
+    .banner-text {
+        font-size: 14px;
+        letter-spacing: 0.015em;
+    }
 }
