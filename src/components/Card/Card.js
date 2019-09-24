@@ -20,7 +20,7 @@ const Card = (props) => {
                     name={name}
                     tagline={tagline}
                     stars={stars}
-                    features={features}/>
+                    icons={features}/>
                 <Rate 
                     rate={rate}
                     tag={tag}
