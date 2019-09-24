@@ -21,7 +21,7 @@ class App extends React.Component {
 
         this.setState({
             cards: DATA.carrier_cards,
-            searchText: DATA.carriers_searched.toString(), 
+            searchText: DATA.carriers_searched, 
             searchTime: time
         });
     }

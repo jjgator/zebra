@@ -3,6 +3,7 @@ import './Card.scss';
 import Logo from '../Logo/Logo';
 import Carrier from '../Carrier/Carrier';
 import Rate from '../Rate/Rate';
+import Features from '../Features/Features';
 
 const Card = (props) => {
     let { 
@@ -29,6 +30,9 @@ const Card = (props) => {
             <button className="arrow-button">
                 <div className="arrow"></div>
             </button> 
+            <div className="main">
+                <Features/>
+            </div>
         </div>
     );
 };
