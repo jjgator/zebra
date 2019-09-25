@@ -25,3 +25,9 @@
         color: #959595;
     }
 }
+
+@media screen and (max-width: 675px) {
+    .details-box {
+        width: 80%;
+    }
+}

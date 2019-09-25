@@ -7,15 +7,11 @@ const Logo = (props) => {
     let { cornerTag } = props;
 
     return (
-        <div className="logo-box">
-            {cornerTag 
-            ? <div className="corner-box">
-                <div className="corner">
-                    {getIcon('IconStarWhite')}
-                </div>
-                <img className="logo-with-corner" src={CarrierLogo} alt=""/>
+        <div className="corner-box">
+            <div className={`corner ${cornerTag ? 'visible' : ''}`}>
+                {getIcon('IconStarWhite')}
             </div>
-            : <img className="logo" src={CarrierLogo} alt=""/>}
+            <img className="logo" src={CarrierLogo} alt=""/>
         </div>
     );
 };

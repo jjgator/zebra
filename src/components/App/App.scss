@@ -1,6 +1,6 @@
 .app {
     margin: 25px auto 10px auto;
-    width: 90vw;
+    width: 50vw;
 
     .banner-text {
         font-size: 14px;
@@ -9,5 +9,11 @@
 
     button:focus {
         outline: none;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .app {
+        width: 90vw;
     }
 }

@@ -1,8 +1,8 @@
 .quote-box {
     display: flex;
     flex-direction: column;
-    width: 34%;
-    margin: 10px 35px 0 0;
+    width: 35%;
+    margin: 25px;
     justify-content: center;
     align-items: flex-end;
 }
@@ -12,6 +12,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    justify-content: space-around;
     padding-bottom: 5px;
     
 
@@ -42,5 +43,13 @@
         color: #959595;
         font-size: 14px;
         font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .quote-box {
+        width: 80%;
+        align-items: center;
+        margin: 0 0 25px 0;
     }
 }

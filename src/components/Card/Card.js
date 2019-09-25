@@ -1,10 +1,10 @@
 import React from 'react';
 import './Card.scss';
-import Logo from '../Logo/Logo';
 import Carrier from '../Carrier/Carrier';
 import Rate from '../Rate/Rate';
 import Features from '../Features/Features';
 import Details from '../Details/Details';
+import { getIcon } from '../../utils';
 
 class Card extends React.Component {
     constructor(props) {
@@ -29,8 +29,11 @@ class Card extends React.Component {
         return (
             <div className="card">
                 <div className="header">
-                    <Logo 
-                        cornerTag={cornerTag}/>
+                    <div className="corner-box">
+                        <div className={`corner ${cornerTag ? 'visible' : ''}`}>
+                            {getIcon('IconStarWhite')}
+                        </div>
+                    </div>
                     <Carrier
                         name={name}
                         tagline={tagline}
@@ -43,10 +46,6 @@ class Card extends React.Component {
                         link={link}/>
                 </div>
     
-                {((features && features[0]) || details) &&
-                <button className="arrow-button" onClick={this.onArrowClick}>
-                    <div className={`arrow ${open ? 'open' : ''}`}></div>
-                </button>}
     
                 <div className={`main ${open ? 'open' : ''}`}>
                     <Features
@@ -58,6 +57,11 @@ class Card extends React.Component {
                             features && features[0] 
                             ? true : false}/>
                 </div>
+
+                {((features && features[0]) || details) &&
+                <button className="arrow-button" onClick={this.onArrowClick}>
+                    <div className={`arrow ${open ? 'open' : ''}`}></div>
+                </button>}
             </div>
         );
     }
