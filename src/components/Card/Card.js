@@ -4,11 +4,12 @@ import Logo from '../Logo/Logo';
 import Carrier from '../Carrier/Carrier';
 import Rate from '../Rate/Rate';
 import Features from '../Features/Features';
+import Details from '../Details/Details';
 
 const Card = (props) => {
     let { 
         cornerTag, name, tagline, stars, rate, features, 
-        tag, type, link
+        tag, type, link, details
     } = props;
 
     return (
@@ -27,12 +28,21 @@ const Card = (props) => {
                     type={type}
                     link={link}/>
             </div>
+
+            {((features && features[0]) || details) &&
             <button className="arrow-button">
                 <div className="arrow"></div>
-            </button> 
+            </button>}
+
             <div className="main">
                 <Features
                     features={features}/>
+                <Details 
+                    details={details}
+                    name={name}
+                    hasFeatures={
+                        features && features[0] 
+                        ? true : false}/>
             </div>
         </div>
     );

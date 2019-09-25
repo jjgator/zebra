@@ -12,7 +12,7 @@ const Carrier = (props) => {
             {tagline && 
             <p className="tagline">{tagline}</p>}
 
-            <div className="details">
+            <div className="stars-icons">
                 {stars &&
                 <div className="star-box">
                     {[...Array(stars)].map(e => getIcon('IconStarGold'))}

@@ -52,7 +52,8 @@ class App extends React.Component {
                             link={card.action.link}
                             rate={card.rate}
                             tag={card.tag}
-                            features={card.features}/>
+                            features={card.features}
+                            details={card.detail_body}/>
                         );
                     })}
                 </div>}
