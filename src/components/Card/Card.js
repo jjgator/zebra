@@ -8,7 +8,7 @@ import Features from '../Features/Features';
 const Card = (props) => {
     let { 
         cornerTag, name, tagline, stars, rate, features, 
-        tag, type, link 
+        tag, type, link
     } = props;
 
     return (
@@ -20,7 +20,7 @@ const Card = (props) => {
                     name={name}
                     tagline={tagline}
                     stars={stars}
-                    icons={features}/>
+                    features={features}/>
                 <Rate 
                     rate={rate}
                     tag={tag}
@@ -31,7 +31,8 @@ const Card = (props) => {
                 <div className="arrow"></div>
             </button> 
             <div className="main">
-                <Features/>
+                <Features
+                    features={features}/>
             </div>
         </div>
     );

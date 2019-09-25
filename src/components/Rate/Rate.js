@@ -16,7 +16,8 @@ const Rate = (props) => {
                 </div>
                 <span className="per">/ mo</span>
             </div>}
-            {type && type !== 2 &&
+            
+            {type !== 2 &&
             <Button
                 link={link}
                 type={type}/>}

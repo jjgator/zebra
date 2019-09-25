@@ -3,7 +3,7 @@ import './Carrier.scss';
 import { getIcon } from '../../utils';
 
 const Carrier = (props) => {
-    let { name, tagline, stars, icons } = props;
+    let { name, tagline, stars, features } = props;
 
     return (
         <div className="carrier-box">
@@ -18,9 +18,9 @@ const Carrier = (props) => {
                     {[...Array(stars)].map(e => getIcon('IconStarGold'))}
                 </div>}
 
-                {icons && icons.length !== 0 &&
+                {features && features.length !== 0 &&
                 <div className="icons-box">
-                    {icons.map(i => getIcon(i.icon))}
+                    {features.map(f => getIcon(f.icon))}
                 </div>}
             </div>
         </div>
